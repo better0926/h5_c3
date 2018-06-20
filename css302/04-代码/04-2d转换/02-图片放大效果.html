@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    
+    div {
+      width: 500px;
+      height: 384px;
+      margin: 100px auto;
+      border: 1px solid #000;
+      overflow: hidden;
+    }
+
+    div img {
+      display: block;
+      transition: all 1s;
+
+
+      /*
+        设置转换的原点， 设置放大的中心点
+        1. 方位名词： left right center   top bottom center
+        2. 具体的像素
+        3. 百分比
+      */
+      transform-origin: 185px 270px;
+      transform-origin: 50% 50%;
+
+    }
+
+    div:hover img {
+      transform: scale(2);
+    }
+
+  </style>
+</head>
+<body>
+
+<div>
+  <img src="images/box.jpg" alt="">
+</div>
+
+</body>
+</html>

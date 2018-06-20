@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>笔记</title>
+  <!-- <link rel="stylesheet" href="lib/css/monokai-sublime.css"> -->
+  <link rel="stylesheet" href="lib/css/default.min.css">
+  <link rel="stylesheet" href="lib/css/vs2015.css">
+  <link rel="stylesheet" href="lib/css/zTreeStyle/zTreeStyle.css">
+  <link rel="stylesheet" href="lib/css/base.css">
+  <link rel="stylesheet" href="lib/css/index.css">
+</head>
+
+<body>
+  <div style='width:25%;'>
+    <ul id="tree" class="ztree" style='width:100%'>
+
+    </ul>
+  </div>
+  <div id='readme' style='width:70%;margin-left:20%;'>
+    <article class='markdown-body'><h1 id="-">渐变</h1>
+<h2 id="-">线性渐变</h2>
+<blockquote>
+<p>linear-gradient指沿着某条直线朝一个方向产生的渐变效果。</p>
+</blockquote>
+<p>线性渐变的核心：</p>
+<ul>
+<li>渐变的方向</li>
+<li>颜色</li>
+</ul>
+<pre><code class="lang-css">/* 注意：渐变实际上相当与一张图片，因为需要加给background-image才会生效 */
+/* 渐变的两个要求：有区间，有颜色变化。 */
+/* 渐变的核心：渐变的方向，渐变的颜色。 */
+/* 最简单的渐变 */
+background-image: linear-gradient(red, green);
+/* 设定渐变的方向  */
+background-image: linear-gradient(to right, red, green);
+/* 也可以设定渐变的角度  */
+background-image: linear-gradient(45deg, red, green);
+/* 设定渐变的范围  */
+background-image: linear-gradient(to right, red 20%, green 80%)
+/* 每一个区间表示渐变颜色的范围  */
+background-image: linear-gradient(to right, red 20%, green 20%)
+</code></pre>
+<p>【演示：渐变-线性渐变.html】</p>
+<p>【演示：导航按钮.html】</p>
+<p>【案例：渐变-案例-发廊效果.html】</p>
+<h2 id="-">径向渐变</h2>
+<blockquote>
+<p>radial-gradient指从一个中心点开始沿着四周产生渐变效果</p>
+</blockquote>
+<p>径向渐变的核心：</p>
+<ul>
+<li>圆的大小</li>
+<li>圆心的位置</li>
+<li>颜色</li>
+</ul>
+<pre><code class="lang-css">/*1. 最简单的渐变*/
+background-image: radial-gradient(red, green);
+
+/*2. 指定圆的半径和圆心*/
+background-image: radial-gradient(200px at center, red, green);
+
+/*3. 指定椭圆*/
+background-image: radial-gradient(200px 80px at center, red, green);
+
+/*4. 指定范围*/
+background-image: radial-gradient(200px at center, green 50%, red 50%);
+
+</code></pre>
+<p>【演示：径向渐变-语法.html】</p>
+<p>【案例：径向渐变-立体小球.html】</p>
+<h1 id="-">过渡</h1>
+<h2 id="-">过渡的属性</h2>
+<ol>
+<li>如果两个状态发生改变，没有过渡，效果是瞬间变化的</li>
+<li>如果加上了过渡，那么这个过程就会有动画的效果。</li>
+<li>整个状态变化的过程是由浏览器来完成的，我们只需要关注开始状态与结束状态即可。</li>
+</ol>
+<pre><code class="lang-css">/*transition-property：设置过渡属性
+/*也可以是width,height*/
+transition-property:all;
+
+/*transition-duration:设置过渡时间*/
+transition-duration:1s;
+
+/*transition-delay：设置过渡延时*/
+transition-delay:2s;
+
+/*transition-timing-function:设置过渡的速度*/
+/*linear，ease，ease-in，ease-out，ease-in-out， steps(10)*/
+transition-timing-function:linear;
+</code></pre>
+<p>【演示：过渡基本语法】</p>
+<h2 id="-">属性合写</h2>
+<pre><code class="lang-css">/* 属性 时间 延时 速度 */
+transition: width 1s 3s linear;
+</code></pre>
+<p>过渡的注意点：</p>
+<ul>
+<li>过渡必须要有两个状态的变化。</li>
+<li>过渡可以写在A状态，也可以写在B状态，但是如果写在B状态，那么回来的时候，就没有过渡效果了。</li>
+</ul>
+<p>【案例：手风琴效果】</p>
+<h1 id="2d-">2D转换</h1>
+<blockquote>
+<p>transform: 转换，是CSS3最具颠覆性的几个特性之一，既可以用于2D转换，也可以用于3D转换。</p>
+<p>transform：2D转换，元素在平面上实现移动、旋转、缩放、斜切等操作</p>
+</blockquote>
+<h2 id="scale-">scale缩放</h2>
+<pre><code class="lang-css">transform: scaleX(0.5);/*让宽度变化*/
+transform: scaleY(0.5);/*让高度变化，注意不能写多个transform，不然会覆盖。*/
+transform: scale(0.5);/*让宽度和高度同时变化*/
+</code></pre>
+<p>注意：</p>
+<ul>
+<li>scale接收的值是倍数，因此没有单位</li>
+<li>scale可以是一个值，如果是一个值，不是说仅仅缩放宽度，高度也会等比例的缩放。</li>
+<li>可以通过transition-origin设定旋转原点</li>
+</ul>
+<h2 id="translate-">translate平移</h2>
+<pre><code class="lang-javascript">transform: translateX(100px);
+transform: translateY(100px);
+transform: translate(100px, 100px);
+transform: translate(50%, 50%);
+</code></pre>
+<p>注意：</p>
+<ul>
+<li>translate的值可以是px，也可以是百分比，如果是百分比，那么参照的是自身的宽高。</li>
+<li>translate移动的元素并不会影响其他盒子，类似于相对定位。</li>
+</ul>
+<h2 id="rotate-">rotate旋转</h2>
+<pre><code class="lang-javascript">transform: rotate(360deg);//旋转360度
+transform: rotate(-360deg);//逆时针旋转360度
+</code></pre>
+<p>注意：</p>
+<ul>
+<li>单位是deg，角度，不是px</li>
+<li>正值顺时针转，负值逆时针转</li>
+<li>可以通过transition-origin设定旋转原点</li>
+</ul>
+<h2 id="skew-">skew斜切(变形)</h2>
+<blockquote>
+<p>skew在实际开发中，是用的最少的一个属性。一般来说，x和y只会倾斜其中的一个</p>
+</blockquote>
+<pre><code class="lang-javascript">/*在水平方向倾斜30deg*/
+transform: skewX(30deg);
+/*在垂直方向倾斜30deg*/
+transform: skewY(30deg);
+</code></pre>
+<p>【案例：扫光效果.html】</p>
+<h2 id="transform-origin-">transform-origin转换原点</h2>
+<blockquote>
+<p>通过transform-origin可以设置转换的中心原点。</p>
+</blockquote>
+<pre><code class="lang-javascript">transform-origin: center center;
+transform-origin: 40px 40px;
+</code></pre>
+<h2 id="-">转换合写问题</h2>
+<pre><code class="lang-javascript">transform:translateX(800px) scale(1.5) rotate(360deg) ;
+//1. transform属性只能写一个，如果写了多个会覆盖
+//2. transform属性可以连写，但是顺序对效果影响的，因为它会在第一个效果的基础上执行第二个效果，然后执行第三个效果（通常会把rotate放后面）
+//3. 如果对transform进行过度效果的时候，初始状态和结束状态一一对应
+</code></pre>
+<p>【案例：盾牌打散与合并效果.html】</p>
+<h1 id="3d-">3D转换</h1>
+<blockquote>
+<p>transform:不仅可以2D转换，还可以进行3D转换。</p>
+</blockquote>
+<p>思考：2D与3D的区别？</p>
+<h2 id="-">坐标轴</h2>
+<blockquote>
+<p>用X、Y、Z分别表示空间的3个维度，三条轴互相垂直。<strong>注意+Y是向下的。</strong></p>
+</blockquote>
+<p><img src="images/zbz.png" alt="img"></p>
+<h2 id="perspective-">perspective透视</h2>
+<blockquote>
+<p>电脑显示屏是一个2D的平面，因为我们看不出来旋转的方向，通过perspective属性，可以定义3D 元素距视图的距离，单位是px。</p>
+<p>说白了，设置了perspective属性后，就有了进大远小的效果了，在视觉上，让我们能看出来3d的效果。</p>
+<p>注意：当为元素定义 perspective 属性时，其子元素会获得透视效果，而不是元素本身。</p>
+</blockquote>
+<pre><code class="lang-javascript">perspective：500px;
+</code></pre>
+<p>关于近大远小</p>
+<p><img src="images/per1.jpg" alt="img"></p>
+<p><img src="images/per2.jpg" alt="img"></p>
+<p>对于我们眼睛来说，离我们越近的房子，我们会感觉到这个房子越大，离我们越远的房子，就会感觉越小，其实房子的大小都是一样的，只是在视觉上的一种不同。</p>
+<p><img src="images/per3.png" alt="img"></p>
+<p>【关于透视的理解.html】</p>
+<h2 id="rotate-">rotate旋转</h2>
+<pre><code class="lang-javascript">transform: rotate(45deg);// 让元素在平面2D中旋转
+transform: rotateX(45deg);// 让元素沿着X轴转45度
+transform: rotateY(45deg);// 让元素沿着Y轴转45度
+transform: rotateZ(45deg);// 让元素沿着Z轴转45度
+</code></pre>
+<p>【01-3D转换-旋转.html】</p>
+<p>问题：看不出来怎么转的，为什么现实生活中能够看出来？</p>
+<h2 id="translate-">translate平移</h2>
+<pre><code class="lang-javascript">/*沿着X轴的正方向移动45px*/
+transform: translateX(45px);
+/*沿着Y轴的正方向移动45px*/
+transform: translateY(45px);
+/*沿着Y轴的正方向移动45px*/
+transform: translateZ(45px);
+
+</code></pre>
+<p>【02-3D转换-平移.html】</p>
+<p>【立方体.html】</p>
+<h2 id="transform-style">transform-style</h2>
+<blockquote>
+<p>transform-style 属性规定如何在 3D 空间中呈现被嵌套的元素。注意这个属性只能给父元素添加。</p>
+</blockquote>
+<pre><code class="lang-javascript">flat:默认值，2d显示
+preserve-3d: 3d显示
+</code></pre>
+<p>transform-style与perspective的区别</p>
+<pre><code class="lang-javascript">/*透视：透视只是相当于设置了一个距离，辅助我们查看3D效果的工具，*/
+/*preserve-3d:给父盒子添加，让子元素保留3D的位置，说白了，只有设置了preserve-3d，这个元素才能被称之为3d元素。 */
+
+//一个3d元素可以没有perspective，但是不能没有transform-style
+</code></pre>
+<p>【3d导航案例.html】</p>
+<p>【切割轮播图案例】</p>
+<p>【美女相册案例】</p>
+</article>
+  </div>
+</body>
+</html>
+<script type="text/javascript" src="lib/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="lib/js/jquery.ztree.all-3.5.min.js"></script>
+<script type="text/javascript" src="lib/js/ztree_toc.min.js"></script>
+<script type="text/javascript" src="lib/js/toc_conf.js"></script>
+<script src="lib/js/highlight.min.js"></script>
+<script>
+  $(document).ready(function () {
+    // 代码高亮的js代码
+    hljs.initHighlightingOnLoad();
+
+    //生成侧边栏的代码
+    var css_conf = eval(markdown_panel_style);
+    $('#readme').css(css_conf)
+
+    var conf = eval(jquery_ztree_toc_opts);
+    $('#tree').ztree_toc(conf);
+  });
+</script>

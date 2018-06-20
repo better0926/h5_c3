@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    
+    div {
+      width: 400px;
+      height: 400px;
+      background-color: pink;
+      margin: 100px auto;
+
+
+      /*
+        径向渐变
+        核心：
+          1. 圆的大小  100px(圆)   200px 100px(椭圆)
+          2. 圆心的位置 at (left top center bottom right 50px  50%)
+          3. 颜色 (线性渐变一样)
+      */
+      background-image: radial-gradient(200px at 50% 50%, red 50%, green 50%);
+    }
+  </style>
+</head>
+<body>
+
+<div></div>
+
+</body>
+</html>

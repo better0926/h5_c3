@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+    body {
+      background-color: #fff;
+      perspective: 1000px;
+    }
+    img {
+      display: block;
+      margin: 100px auto;
+
+      transition: all 1s;
+
+    }
+
+
+    /*
+
+      如何判断旋转的方向：左手定则
+
+      1. 大拇指方向就是X轴的正方向
+      2. 四指弯曲的方向就是旋转的方向
+    */
+
+    img:hover {
+      transform: rotateY(45deg);
+    }
+  </style>
+</head>
+<body>
+
+<img src="images/box.jpg" alt="">
+
+</body>
+</html>

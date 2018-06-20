@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+    /*
+      transform:有四个值
+        scale:缩放
+        translate:平移
+        rotate:旋转
+        skew:斜切
+
+
+     transform只能写一个，如果写了多个，会覆盖以前的
+    */
+
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      transition: all 1s;
+
+      /*合写的顺序需要一一对应，不然容易出问题*/
+      /*transform:  scale(1)  translateX(0) rotate(0deg);*/
+    }
+
+
+    /*需求： 平移到800px 并且 放大1.5倍， 并且旋转360deg*/
+    /*合写有顺序问题，，，，坐标轴会跟着rotate进行旋转*/
+    body:hover div {
+      transform: scale(1.5) translateX(800px) rotate(360deg);
+    }
+
+
+  </style>
+</head>
+<body>
+
+<div></div>
+
+</body>
+</html>

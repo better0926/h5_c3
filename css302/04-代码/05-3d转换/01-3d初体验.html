@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    
+    body {
+      background-color: #fff;
+
+
+      /*透视距离： 理解眼睛距离物体的距离*/
+
+      /*1. 想要进大远小的效果，要使用perspective：属性 */
+      /*2. 值越大，近大远小的效果不明显， 值越小，效果越明显*/
+      /*3. 值要合适，一般1000px*/
+      /*4. perspective:父元素加*/
+      perspective: 1000px;
+    }
+    img {
+      display: block;
+      margin: 100px auto;
+
+      transition: all 1s;
+
+    }
+
+    img:hover {
+      transform: rotateX(45deg);
+    }
+  </style>
+</head>
+<body>
+
+<img src="images/box.jpg" alt="">
+
+</body>
+</html>

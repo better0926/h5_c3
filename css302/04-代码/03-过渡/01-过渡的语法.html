@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+
+      /*给div添加了过渡， 以后div的样式只要发生了改变，就不会瞬间变化，会慢慢的变化。*/
+      /* 中间的变化是由浏览器来完成的。 */
+
+      /*transition和background一样，是个合写的属性 */
+      /*transition: all 1s;*/
+
+
+      /*指定哪个属性有过渡效果*/
+      /*特殊值： all,表示所有的属性都有过渡效果*/
+      /*transition-property: all;*/
+      /*指定过渡的持续时间*/
+      /*transition-duration: 1s;*/
+
+
+      /*linear:匀速的  ease:变速  steps(10)*/
+      /*transition-timing-function: ease;*/
+
+      /*延时*/
+      /*transition-delay: 1s;*/
+
+
+      /*transition:合写*/
+      /*合写没有顺序，但是延迟时间一定是在持续时间的后面*/
+
+
+      /*transition: all 1s linear 2s;*/
+      transition: all 1s;
+    }
+    
+    div:hover {
+
+      width: 400px;
+      height: 400px;
+      background-color: green;
+    }
+
+  </style>
+</head>
+<body>
+
+<div></div>
+
+</body>
+</html>

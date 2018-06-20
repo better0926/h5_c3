@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    body {
+      /*perspective: 1000px;*/
+    }
+    ul {
+      width: 200px;
+      height: 200px;
+      /*border: 1px solid #000;*/
+      margin: 200px auto;
+      position: relative;
+
+      transform-style: preserve-3d;
+      transform: rotateX(45deg) rotateY(45deg);
+    }
+
+    ul li {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: pink;
+      transition: all 1s;
+      opacity: .5;
+      font-size: 50px;
+      line-height: 100px;
+      text-align: center;
+    }
+
+
+    li:nth-child(1) {
+      background-color: green;
+    }
+    
+    li:nth-child(2) {
+      background-color: red;
+    }
+    
+    li:nth-child(3) {
+      background-color: blue;
+    }
+
+    li:nth-child(4) {
+      background-color: purple;
+    }
+
+    li:nth-child(5) {
+      background-color: skyblue;
+    }
+
+    li:nth-child(6) {
+      background-color: gray;
+    }
+  </style>
+</head>
+<body>
+
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+<script>
+
+
+  //第一个面
+  setTimeout(function () {
+    document.querySelector("li:nth-child(1)").style.transform = "translateZ(100px)"
+  }, 1000);
+
+
+  //第二个面
+  setTimeout(function () {
+    document.querySelector("li:nth-child(2)").style.transform = "rotateX(90deg)"
+  }, 2000);
+
+  setTimeout(function () {
+    document.querySelector("li:nth-child(2)").style.transform = "rotateX(90deg) translateZ(100px)"
+  }, 3000);
+
+  //第三个面
+  setTimeout(function () {
+    document.querySelector("li:nth-child(3)").style.transform = "rotateX(180deg)"
+  }, 4000);
+
+  setTimeout(function () {
+    document.querySelector("li:nth-child(3)").style.transform = "rotateX(180deg) translateZ(100px)"
+  }, 5000);
+
+
+  //第四个面
+  setTimeout(function () {
+    document.querySelector("li:nth-child(4)").style.transform = "rotateX(270deg)"
+  }, 6000);
+
+  setTimeout(function () {
+    document.querySelector("li:nth-child(4)").style.transform = "rotateX(270deg) translateZ(100px)"
+  }, 7000);
+
+  //第五个面
+  setTimeout(function () {
+    document.querySelector("li:nth-child(5)").style.transform = "rotateY(90deg)"
+  }, 8000);
+
+  setTimeout(function () {
+    document.querySelector("li:nth-child(5)").style.transform = "rotateY(90deg) translateZ(100px)"
+  }, 9000);
+
+  //第四个面
+  setTimeout(function () {
+    document.querySelector("li:nth-child(6)").style.transform = "rotateY(270deg)"
+  }, 10000);
+
+  setTimeout(function () {
+    document.querySelector("li:nth-child(6)").style.transform = "rotateY(270deg) translateZ(100px)"
+  }, 11000);
+</script>
+
+</body>
+</html>

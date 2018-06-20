@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    div {
+      width: 400px;
+      height: 400px;
+      background-color: pink;
+      margin: 100px auto;
+
+      transition: all 1s;
+
+    }
+
+
+    /*skew: 斜切， 盒子变形， 变成一个菱形*/
+    div:hover {
+      transform: skewX(45deg);
+      transform: skewY(45deg);
+      transform: skew(45deg, 45deg);
+    }
+  </style>
+</head>
+<body>
+
+<div></div>
+
+</body>
+</html>

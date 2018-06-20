@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <style>
+
+    /*
+      scale(1.5)
+      rotate(45deg)
+      translate(50px, 50px)
+
+      skew
+    */
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+
+    /*
+    1. 让他绝对定位
+    2. top: 50%,  left:50%
+    3. 往左往上移动自身的50%
+        margin-left margin-top:(明确盒子的大小)
+        transform: translate(-50%, -50%)
+    */
+
+    div {
+      width: 200px;
+      background-color: pink;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    哈哈哈哈哈哈
+    哈哈哈哈哈哈
+    哈哈哈哈哈哈
+  </div>
+
+</body>
+</html>

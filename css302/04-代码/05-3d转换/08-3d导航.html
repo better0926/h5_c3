@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    body {
+      /*perspective: 1000px;*/
+    }
+
+    ul {
+      width: 700px;
+      margin: 100px auto;
+
+    }
+    
+    ul li {
+      width: 100px;
+      height: 50px;
+      float: left;
+      /*border: 1px solid #000;*/
+      box-sizing: border-box;
+      position: relative;
+
+
+
+      transition: all 1s;
+      /*让span在3d空间内*/
+      transform-style: preserve-3d;
+
+    }
+
+    ul li:hover {
+      transform: rotateX(-90deg);
+    }
+
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: 50px;
+    }
+
+
+    /*往前*/
+    span:nth-child(1) {
+      background-color: green;
+      transform: translateZ(25px);
+    }
+    
+    span:nth-child(2) {
+      transform:  rotateX(90deg) translateZ(25px);
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+
+<ul>
+  <li>
+    <span>传智播客</span>
+    <span>web前端</span>
+  </li>
+  <li>
+    <span>传智播客</span>
+    <span>web前端</span>
+  </li>
+  <li>
+    <span>传智播客</span>
+    <span>web前端</span>
+  </li>
+  <li>
+    <span>传智播客</span>
+    <span>web前端</span>
+  </li>
+  <li>
+    <span>传智播客</span>
+    <span>web前端</span>
+  </li>
+  <li>
+    <span>传智播客</span>
+    <span>web前端</span>
+  </li>
+  <li>
+    <span>传智播客</span>
+    <span>web前端</span>
+  </li>
+</ul>
+
+</body>
+</html>

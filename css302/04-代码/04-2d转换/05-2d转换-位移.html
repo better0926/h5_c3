@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    body {
+      overflow: hidden;
+    }
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      transition: all 1s;
+    }
+
+    div:hover {
+
+      /*
+      transiton: 过渡
+      transform: 转换
+      translate: 位移，transform的一个值
+      */
+
+      /*translate: 位移，平移：在原来的位置的基础上移动一段距离*/
+
+      transform: translateX(50px);
+      transform: translateY(50px);
+      /*相对都是盒子的大小*/
+      transform: translate(50%, 50%);
+    }
+
+  </style>
+</head>
+<body>
+
+<div></div>
+<div></div>
+
+</body>
+</html>
