@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    body {
+      background-color: #000;
+      perspective: 1000px;
+    }
+
+    ul {
+      width: 300px;
+      height: 200px;
+      border: 1px solid #fff;
+      margin: 200px auto;
+      position: relative;
+      transition: all 1s;
+      transform-origin: bottom;
+      transform-style: preserve-3d;
+      background-color: #fff;
+    }
+
+
+    li {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #fff;
+      transition: all 1s 1s;
+    }
+
+    /*ul hover的时候，让li*/
+    ul:hover li:nth-child(1) {
+      transform: translateZ(20px);
+    }
+
+    ul:hover li:nth-child(2) {
+      transform: translateZ(40px);
+    }
+
+    ul:hover li:nth-child(3) {
+      transform: translateZ(60px);
+    }
+
+    ul:hover li:nth-child(4) {
+      transform: translateZ(80px);
+    }
+
+    ul:hover li:nth-child(5) {
+      transform: translateZ(100px);
+    }
+    /*
+      思路：
+      1. ul hover的时候，推到ul
+      2. 让li沿着Z轴走
+    */
+
+    ul:hover {
+      transform: rotateX(70deg);
+    }
+  </style>
+</head>
+<body>
+
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+</body>
+</html>
