@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    
+    /* 子代选择器 */
+    ul>li {
+      /*background-color: red;*/
+    }
+
+
+    /*后代选择器*/
+    body li {
+      /*background-color: red;*/
+    }
+
+
+    /*相邻选择器：  找的是.now后面的一个兄弟元素li*/
+    .now + li {
+      /*background-color: red;*/
+    }
+
+    .now ~ span {
+      background-color: red;
+    }
+
+
+  </style>
+</head>
+<body>
+
+<ul>
+  <li>我是第1个li</li>
+  <li>我是第2个li</li>
+  <li>我是第3个li</li>
+  <li>我是第4个li</li>
+  <li class="now">我是第5个li</li>
+  <span>111111</span>
+  <li>我是第6个li</li>
+  <li>我是第7个li</li>
+  <li>我是第8个li</li>
+  <li>我是第9个li</li>
+  <li>我是第10个li</li>
+</ul>
+
+</body>
+</html>

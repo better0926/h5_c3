@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul {
+      margin: 0 auto;
+      width: 500px;
+    }
+
+    li {
+      float: left;
+      height: 50px;
+      line-height: 50px;
+      width: 100px;
+      border: 1px solid #000;
+      text-align: center;
+      /*标准盒模型：盒子的大小=width+padding+border*/
+      /*怪异盒模型：width=content+padding+border*/
+      box-sizing: border-box;
+      position: relative;
+    }
+
+
+    /*给.new这个类生成给一个伪元素*/
+    .new::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 36px;
+      height: 23px;
+      background-image: url(imgs/icon.png);
+    }
+  </style>
+</head>
+<body>
+
+<ul>
+  <li><a href="#">导航1</a></li>
+  <li class="new"><a href="#">导航2</a></li>
+  <li><a href="#">导航3</a></li>
+  <li><a href="#">导航4</a></li>
+  <li class="new"><a href="#">导航5</a></li>
+</ul>
+
+</body>
+</html>

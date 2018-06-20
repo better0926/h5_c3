@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      margin: 100px auto;
+
+
+      /*让div旋转 45度*/
+
+
+      /*打包工具： gulp  webpack*/
+
+      /*写私有前缀的目的：  尽可能的兼容更多的浏览器*/
+      /*谷歌浏览器 safari    -webkit-*/
+      -webkit-transform: rotate(45deg);
+      /*火狐浏览器的前缀*/
+      -moz-transform: rotate(45deg);
+      /*ie浏览器的前缀  -ms-*/
+      -ms-transform: rotate(45deg);
+      /*opera:   -o-*/
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+
+
+    }
+  </style>
+</head>
+<body>
+
+<div></div>
+
+</body>
+</html>

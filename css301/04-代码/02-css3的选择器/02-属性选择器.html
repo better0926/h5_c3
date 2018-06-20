@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <style>
+
+    /*[]表示属性选择器*/
+
+    /*获取的所有具有skill的li元素*/
+    li[skill] {
+      /*background-color: red;*/
+    }
+
+    /*获取所有的 skill=shuai 的元素*/
+    li[skill = "shuai"] {
+      /*background-color: red;*/
+    }
+
+    /*有skill属性，并且值以sell开始*/
+    li[skill ^= "sell"] {
+      /*background-color: red;*/
+    }
+
+    li[skill $= "Meng"] {
+      /*background-color: green;*/
+    }
+
+    /*有skill属性，并且属性值有 e*/
+    li[skill *= "e"] {
+      background-color: blue;
+    }
+
+  </style>
+
+</head>
+<body>
+
+
+<input type="button" value="哈哈">
+<input type="text">
+
+<ul>
+  <li skill="mengMeng">娟娟</li>
+  <li skill="sellMeng">芹芹</li>
+  <li skill="sellFriend">飞飞</li>
+  <li skill="shuai">聪聪</li>
+  <li skill="shuai">铮铮</li>
+  <li skill="veryMeng">萍萍</li>
+</ul>
+
+<!--jQuery是完全兼容css选择器，意味着 jquery可以这么写-->
+<script>
+
+  //$("li[skill='shuai']")
+
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    body {
+      background-color: #000;
+    }
+    h1 {
+      font-size:100px;
+      line-height: 100px;
+      text-align: center;
+
+    }
+    /*
+    1. 长度1： 水平的偏移值
+    2. 长度2：垂直的偏移值
+    3. 长度3：羽化值， 阴影模糊度
+    4. red: 阴影的颜色
+    */
+
+    h1:first-child {
+      text-shadow: 2px 2px 2px red;
+    }
+
+    h1:nth-child(2) {
+      text-shadow: 2px 2px 2px red, 4px 4px 4px green, 6px 6px 6px blue;
+    }
+
+    h1:nth-child(3) {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    }
+  </style>
+</head>
+<body>
+
+<h1>我爱你</h1>
+<h1>我爱你</h1>
+<h1>I Love You</h1>
+
+</body>
+</html>

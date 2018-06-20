@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    div {
+      border: 1px solid #000;
+      width: 1000px;
+      height: 600px;
+      margin: 0 auto;
+      /*需求：给div设置一个背景图*/
+      background-image: url("images/1.jpg");
+      background-repeat: no-repeat;
+
+      /*background-size:设置背景图的大小*/
+
+      /*把背景图设置为800*600*/
+      /*background-size: 800px 600px;*/
+      /*百分比相对于盒子的宽度和高度*/
+      /*background-size: 100% 100%;*/
+
+
+      /*contain: 等比例缩放，保证宽度或者高度跟盒子的大小一致。 保证整个图片都在盒子中，缺点：会有留白*/
+      /*background-size: contain;*/
+
+      /*等比例缩放，保证图片覆盖整个容器，缺点：有一部分超出整个盒子*/
+      background-size: cover;
+      background-position: center;
+
+    }
+
+  </style>
+</head>
+<body>
+
+<!--
+  background-size:用于调整背景图的大小
+-->
+<div></div>
+
+</body>
+</html>

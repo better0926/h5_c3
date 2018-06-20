@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+
+5类
+
+1. 基本选择器
+  标签：  div{}
+  类选择器： .class{}
+  id选择器：  #id {}
+  通配符:     *{}
+
+  交集和并集
+  s1s2:  div.demo{}
+  s1, s2:div, p{}
+
+2. 关系选择器
+  子代： div > p {}
+  后代： div p {}
+  相邻选择器： div + p{}
+  兄弟选择器： div ~ p{}  div后面所有的兄弟中的p
+
+3. 属性选择器
+  div[attr]{} : div中有attr属性的
+  div[attr='val']: div中attr属性值是val的
+  div[attr^='val']   val开头
+  div[attr$='val']   val结尾
+  div[attr *= 'val']  值包含val即可
+
+4. 伪类选择器
+  child系列：  first-child  last-child nth-child(1) 数字  odd/even n+1
+  of-type系列： first-of-type last-of-type nth-of-type
+
+  其他：
+    :focus
+    :checked
+    :not
+
+
+5. 伪元素选择器
+    ::before  ::after: 以后用的非常非常多  content:''  默认是行内样式
+    ::first-letter  ::first-line  ::selection  ::placeholder
+</body>
+</html>

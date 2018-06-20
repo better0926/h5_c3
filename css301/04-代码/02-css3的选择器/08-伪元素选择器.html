@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      position: relative;
+    }
+
+    /*before和after*/
+    /*1. 必须要有content*/
+    /*
+      2. 默认生成的是行内元素，设置不了宽高的
+        2.1 display:block
+        2.2 脱标
+    */
+
+
+    /*伪元素：一般用于小图标，遮罩层*/
+    div::before {
+      /*可以指定文本，或者是空*/
+      content: '11111';
+      width: 100px;
+      height: 100px;
+      background-color: green;
+    }
+
+    div::after {
+      content: "222";
+    }
+  </style>
+</head>
+<body>
+
+<div>
+  <p>我是一个p标签</p>
+  <p>我是一个p标签</p>
+</div>
+
+</body>
+</html>

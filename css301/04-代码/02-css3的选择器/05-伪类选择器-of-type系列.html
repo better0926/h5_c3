@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  
+  <style>
+
+
+    /*nth-child:  找的父元素的第几个子元素*/
+    /*nth-of-type:  找的父元素的第一个标签*/
+
+    /*first-of-type: 找到的父元素的是一个span*/
+    span:nth-of-type(2) {
+      /*background-color: red;*/
+    }
+    
+
+    /*li:first-of-type: 父元素下第一个li标签*/
+    /*li:last-of-type: 父元素下最后一个li标签*/
+    /*li:nth-of-type(2): 父元素下最后一个li标签*/
+    li:nth-of-type(3) {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+
+<ul>
+  <li>11</li>
+  <li>11</li>
+  <li>11</li>
+  <li>11</li>
+  <li>11</li>
+</ul>
+
+<div>
+  <p>1111</p>
+  <span>2222</span>
+  <p>1111</p>
+  <span>2222</span>
+  <p>1111</p>
+  <span>2222</span>
+  <p>1111</p>
+  <span>2222</span>
+  <p>1111</p>
+  <span>2222</span>
+</div>
+
+</body>
+</html>
